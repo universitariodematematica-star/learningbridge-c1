@@ -1,0 +1,342 @@
+﻿:root {
+    --lb-purple: #5c1d53;
+    --lb-green: #178a75;
+    --lb-background: #f4f5f7;
+    --lb-white: #ffffff;
+    --lb-text: #30343b;
+    --lb-muted: #707782;
+    --lb-border: #e5e7eb;
+    --lb-radius: 12px;
+    --lb-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--lb-background);
+    color: var(--lb-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--lb-green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.lb-header {
+    background: var(--lb-purple);
+    color: var(--lb-white);
+    padding: 22px 24px;
+}
+
+.lb-container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.lb-main {
+    padding: 32px 0 48px;
+}
+
+.lb-title {
+    color: var(--lb-purple);
+    margin-top: 0;
+}
+
+.lb-card {
+    background: var(--lb-white);
+    border: 1px solid var(--lb-border);
+    border-radius: var(--lb-radius);
+    padding: 24px;
+    box-shadow: var(--lb-shadow);
+}
+
+.lb-button {
+    display: inline-block;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: var(--lb-green);
+    color: var(--lb-white);
+    font-weight: 600;
+}
+
+.lb-button:hover {
+    filter: brightness(0.92);
+}
+
+.lb-muted {
+    color: var(--lb-muted);
+}
+
+.lb-footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--lb-muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .lb-header {
+        padding: 18px;
+    }
+
+    .lb-main {
+        padding: 20px 0 32px;
+    }
+
+    .lb-card {
+        padding: 18px;
+    }
+}
+
+
+/* Distribución de imagen y lectura */
+.lb-reading-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.5fr);
+    align-items: stretch;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.lb-reading-image {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.lb-reading-text {
+    min-width: 0;
+}
+
+.lb-reading-text p {
+    margin-top: 0;
+}
+
+@media (max-width: 650px) {
+    .lb-reading-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lb-reading-image {
+        height: auto;
+        max-height: 380px;
+    }
+}
+
+
+/* Justificación del texto de lectura */
+.lb-reading-text {
+    text-align: justify;
+}
+
+
+/* Segunda lectura: imagen a la derecha */
+.lb-reading-layout-reverse {
+    grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
+}
+
+
+/* Sección gramatical */
+.lb-grammar-text {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.lb-grammar-text h3 {
+    color: var(--lb-purple);
+    text-align: left;
+}
+
+.lb-grammar-text ul {
+    padding-left: 28px;
+}
+
+.lb-grammar-text li {
+    margin-bottom: 12px;
+}
+
+
+/* Ajustes de tipografía para lecturas y gramática */
+.lb-reading-text,
+.lb-grammar-text {
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.lb-reading-text p {
+    color: #000000;
+}
+
+.lb-grammar-text li {
+    color: #000000;
+}
+
+
+/* Nuevo tamaño de letra para lecturas y gramática */
+.lb-reading-text,
+.lb-grammar-text {
+    font-size: 25.5px;
+    color: #000000;
+    line-height: 1.8;
+}
+
+
+/* Tamaño definitivo de lecturas y gramática */
+.lb-reading-text,
+.lb-grammar-text {
+    font-size: 21.25px;
+    color: #000000;
+    line-height: 1.8;
+}
+
+/* Restaurar tamaño original de lecturas y gramática */
+.lb-reading-text,
+.lb-grammar-text {
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.8;
+}
+
+/* Grammar Practice */
+.lb-practice {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--lb-border);
+    color: #000000;
+}
+
+.lb-practice h3 {
+    color: var(--lb-purple);
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.lb-practice-instruction {
+    margin-bottom: 24px;
+}
+
+.lb-practice-question {
+    margin-bottom: 26px;
+}
+
+.lb-practice-sentence {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.lb-practice-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lb-option-button {
+    background: #e5e7eb;
+    color: #30343b;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.lb-option-button:hover {
+    background: #d5d8dd;
+}
+
+.lb-option-button.lb-option-selected {
+    background: #c5c9cf;
+    border-color: #aeb4bd;
+}
+
+.lb-option-button.lb-option-correct {
+    background: #198754;
+    color: #ffffff;
+    border-color: #198754;
+}
+
+.lb-option-button.lb-option-incorrect {
+    background: #dc3545;
+    color: #ffffff;
+    border-color: #dc3545;
+}
+
+.lb-option-button:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.lb-evaluate-button {
+    margin-top: 12px;
+    padding: 11px 28px;
+    background: var(--lb-green);
+    color: #ffffff;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+}
+
+.lb-evaluate-button:disabled {
+    opacity: 0.65;
+    cursor: default;
+}
+
+.lb-practice-feedback {
+    display: none;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+.lb-practice-feedback.lb-feedback-visible {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .lb-practice-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .lb-option-button {
+        text-align: left;
+    }
+}
+
+/* Indicadores de respuestas */
+.lb-answer-indicator {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    vertical-align: middle;
+}
+
+.lb-answer-check {
+    color: #198754;
+}
+
+.lb-answer-cross {
+    color: #dc3545;
+}
