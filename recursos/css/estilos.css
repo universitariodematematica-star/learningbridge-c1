@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --lb-purple: #5c1d53;
     --lb-green: #178a75;
     --lb-background: #f4f5f7;
@@ -339,4 +339,189 @@ button {
 
 .lb-answer-cross {
     color: #dc3545;
+}
+
+
+/* =========================================
+   LEARNING BRIDGE - GRAMMAR BOARD MODAL
+========================================= */
+
+.lb-open-grammar-board {
+    display: block;
+    margin: 25px 0;
+    padding: 12px 24px;
+    background: #178a75;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.lb-open-grammar-board:hover {
+    background: #116b5b;
+}
+
+.lb-grammar-board-modal[hidden] {
+    display: none !important;
+}
+
+.lb-grammar-board-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(20, 15, 25, 0.72);
+}
+
+.lb-grammar-board-dialog {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.3);
+}
+
+.lb-grammar-board-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 26px;
+    background: #5c1d53;
+    color: #ffffff;
+}
+
+.lb-grammar-board-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.lb-close-grammar-board {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 29px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lb-close-grammar-board:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.lb-grammar-board-content {
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.lb-grammar-board-section {
+    margin-bottom: 35px;
+}
+
+.lb-grammar-board-section h3 {
+    margin-bottom: 8px;
+    color: #5c1d53;
+    font-size: 19px;
+}
+
+.lb-grammar-board-section p {
+    margin-bottom: 15px;
+    color: #444444;
+    font-size: 15px;
+}
+
+.lb-grammar-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.lb-grammar-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.lb-grammar-table th {
+    padding: 13px 12px;
+    background: #5c1d53;
+    color: #ffffff;
+    border: 1px solid #74406c;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lb-grammar-table td {
+    min-width: 100px;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    color: #292929;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.lb-grammar-table tbody tr:nth-child(even) {
+    background: #f7f5f7;
+}
+
+.lb-grammar-table .lb-grammar-editable-row td {
+    height: 48px;
+    min-width: 110px;
+    background: #ffffff;
+    cursor: text;
+    outline: none;
+}
+
+.lb-grammar-table .lb-grammar-editable-row td:focus {
+    background: #f0faf7;
+    box-shadow: inset 0 0 0 2px #178a75;
+}
+
+.lb-grammar-table .lb-grammar-editable-row td:empty::after {
+    content: "Write here...";
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .lb-grammar-board-modal {
+        padding: 8px;
+    }
+
+    .lb-grammar-board-dialog {
+        max-height: 95vh;
+    }
+
+    .lb-grammar-board-header {
+        padding: 14px 17px;
+    }
+
+    .lb-grammar-board-header h2 {
+        font-size: 19px;
+    }
+
+    .lb-grammar-board-content {
+        padding: 16px;
+    }
+
+    .lb-grammar-board-section h3 {
+        font-size: 17px;
+    }
 }

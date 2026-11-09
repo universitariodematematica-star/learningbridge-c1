@@ -1,4 +1,4 @@
-﻿window.LearningBridge = window.LearningBridge || {};
+window.LearningBridge = window.LearningBridge || {};
 
 window.LearningBridge.initGrammarPractice = function () {
     const questions = [
@@ -486,9 +486,97 @@ window.LearningBridge.initListeningPractice = function () {
         evaluateButton.disabled = true;
     });
 };
+window.LearningBridge.initGrammarBoard = function () {
+    const modal = document.getElementById("lb-grammar-board-modal");
+    const openButton = document.getElementById("lb-open-grammar-board");
+    const closeButton = document.getElementById("lb-close-grammar-board");
+    const storageKey = "learningBridgeGrammarBoard_v1";
+
+    if (!modal || !openButton || !closeButton) {
+        return;
+    }
+
+    const tables = Array.from(modal.querySelectorAll(".lb-grammar-table"));
+
+    // Restore previously saved examples.
+    try {
+        const savedData = localStorage.getItem(storageKey);
+
+        if (savedData) {
+            const examples = JSON.parse(savedData);
+
+            if (Array.isArray(examples)) {
+                tables.forEach((table, tableIndex) => {
+                    const cells = table.querySelectorAll(
+                        'td[contenteditable="true"]'
+                    );
+
+                    const savedCells = examples[tableIndex];
+
+                    if (Array.isArray(savedCells)) {
+                        cells.forEach((cell, cellIndex) => {
+                            if (typeof savedCells[cellIndex] === "string") {
+                                cell.textContent = savedCells[cellIndex];
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    } catch (error) {
+        console.warn("Could not restore Grammar Board data:", error);
+    }
+
+    // Save all editable cells automatically.
+    const saveExamples = function () {
+        const examples = tables.map(table => {
+            return Array.from(
+                table.querySelectorAll('td[contenteditable="true"]')
+            ).map(cell => cell.textContent);
+        });
+
+        try {
+            localStorage.setItem(storageKey, JSON.stringify(examples));
+        } catch (error) {
+            console.warn("Could not save Grammar Board data:", error);
+        }
+    };
+
+    modal.querySelectorAll('td[contenteditable="true"]').forEach(cell => {
+        cell.addEventListener("input", saveExamples);
+    });
+
+    const openModal = function () {
+        modal.hidden = false;
+        document.body.classList.add("lb-grammar-board-open");
+        closeButton.focus();
+    };
+
+    const closeModal = function () {
+        modal.hidden = true;
+        document.body.classList.remove("lb-grammar-board-open");
+        openButton.focus();
+    };
+
+    openButton.addEventListener("click", openModal);
+    closeButton.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !modal.hidden) {
+            closeModal();
+        }
+    });
+};
 document.addEventListener("DOMContentLoaded", function () {
     window.LearningBridge.initGrammarPractice();
     window.LearningBridge.initListeningPractice();
+    window.LearningBridge.initGrammarBoard();
 });
 
 
