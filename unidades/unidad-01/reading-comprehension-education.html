@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension - Education and the Internet</title>
+    <link rel="stylesheet" href="../../recursos/css/estilos.css">
+
+    <style>
+        .reading-section {
+            line-height: 1.8;
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .quiz-instructions {
+            background: #e8f3fa;
+            color: #17364B;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .question-card {
+            background: #f8fafc;
+            border: 1px solid #dce4ec;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 18px 0;
+        }
+
+        .question-card h3 {
+            color: #31516f;
+            margin-top: 0;
+            font-size: 17px;
+        }
+
+        .option-label {
+            display: block;
+            background: white;
+            border: 1px solid #dce4ec;
+            border-radius: 7px;
+            padding: 11px 13px;
+            margin: 9px 0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .option-label:hover {
+            background: #e8f3fa;
+        }
+
+        .option-label input {
+            margin-right: 10px;
+        }
+
+        .btn-evaluate {
+            display: block;
+            width: 100%;
+            background: #31516f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+
+        .btn-evaluate:hover {
+            background: #223d56;
+        }
+
+        .btn-evaluate:disabled {
+            background: #777;
+            cursor: not-allowed;
+        }
+
+        #resultados {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #e8f3fa;
+        }
+
+        .resultado-pregunta {
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 7px;
+            background: white;
+        }
+
+        .respuesta-correcta {
+            border-left: 5px solid #178a75;
+        }
+
+        .respuesta-incorrecta {
+            border-left: 5px solid #c0392b;
+        }
+
+        .correcta {
+            color: #178a75;
+            font-weight: bold;
+        }
+
+        .incorrecta {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        #calificacion {
+            font-size: 25px;
+            font-weight: bold;
+            color: #31516f;
+        }
+
+        .exercise-collapsible {
+            border: 1px solid #dce4ec;
+            border-radius: 12px;
+            margin-top: 20px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .exercise-collapsible > summary {
+            cursor: pointer;
+            padding: 16px 20px;
+            background: #31516f;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        .exercise-collapsible > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .exercise-collapsible > summary::after {
+            content: "+";
+            float: right;
+            font-size: 22px;
+        }
+
+        .exercise-collapsible[open] > summary::after {
+            content: "−";
+        }
+
+        .exercise-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="lb-header">
+    <div class="lb-container">
+        <h1>Learning Bridge</h1>
+        <p>Advanced English C1</p>
+    </div>
+</header>
+
+<main class="lb-container lb-main">
+    <section class="lb-card">
+
+        <a href="../../index.html">Back to course index</a>
+
+        <h2 class="lb-title">Unit 1</h2>
+
+        <details class="exercise-collapsible">
+            <summary>Exercise 1</summary>
+            <div class="exercise-content">
+                <div id="historial-intentos"></div>
+        <div id="intento-activo">
+
+        <h3>Reading Comprehension</h3>
+
+        <h1>Education, the Internet, and Its Impact on Students</h1>
+
+        <div class="reading-section">
+
+            <p>
+                Education has changed a lot in recent years because of the Internet.
+                Today, students can use computers, tablets, and smartphones to find
+                information, study different subjects, and communicate with teachers
+                and classmates. The Internet has become an important part of modern
+                education. It offers many opportunities, but it also creates some
+                challenges for students, teachers, and families.
+            </p>
+
+            <p>
+                One of the biggest advantages of the Internet is that students can
+                access information quickly. In the past, they had to visit libraries
+                and look through many books to find answers. Now, they can search for
+                information online in just a few seconds. They can also watch
+                educational videos, read articles, listen to podcasts, and take online
+                courses. This makes learning more flexible and gives students more
+                opportunities to improve their knowledge outside the classroom.
+            </p>
+
+            <p>
+                Another positive impact is communication. Students can work together
+                even when they are in different places. They can share documents,
+                exchange ideas, and ask questions through online platforms. Teachers
+                can also use digital tools to explain difficult topics, prepare
+                presentations, and give students extra activities. As a result,
+                lessons can become more interesting and interactive. Students can
+                also learn at their own speed and repeat a lesson when they do not
+                understand something.
+            </p>
+
+            <p>
+                However, the Internet also has disadvantages. Some students spend
+                too much time on social media, online games, or entertainment
+                websites instead of studying. This can affect their concentration,
+                sleep, and academic performance. Notifications and online messages
+                can interrupt their work and make it difficult to finish homework.
+                For this reason, students need to organize their time and learn to
+                use technology responsibly.
+            </p>
+
+            <p>
+                Another important problem is the quality of online information.
+                Not everything published on the Internet is correct. Some websites
+                contain false information or ideas that are not supported by facts.
+                Students should compare different sources, check the authors, and
+                use reliable educational websites. Learning how to find and evaluate
+                information is an important skill for their future.
+            </p>
+
+            <p>
+                There is also a difference between students who have access to
+                technology and those who do not. Some families cannot afford a
+                computer or a good Internet connection. As a result, some students
+                have fewer opportunities to complete online activities or attend
+                virtual classes. Schools and governments should work together to
+                make technology more accessible to everyone.
+            </p>
+
+            <p>
+                In conclusion, the Internet has changed education in many positive
+                ways. It offers students more information, better communication,
+                and new learning opportunities. However, it is important to
+                understand its risks and use it carefully. Technology cannot
+                replace good teachers, personal effort, or human communication.
+                The best results come when students combine traditional learning
+                with digital resources. With guidance from teachers and families,
+                the Internet can become a powerful tool for education and help
+                students build a better future.
+            </p>
+
+        </div>
+
+        <hr>
+
+        <h2>Exercise 1 - Multiple Choice</h2>
+
+        <div class="quiz-instructions">
+            <strong>Instructions:</strong>
+            Read the text carefully and answer the 20 questions.
+            Choose only one answer for each question.
+            Each question is worth one point.
+        </div>
+
+        <p id="progreso">20 questions | 0 answers selected</p>
+
+        <div id="contenedor-preguntas"></div>
+
+        <button type="button" id="btn-evaluar" class="btn-evaluate">
+            Evaluate
+        </button>
+
+        <div id="resultados">
+            <h2>Evaluation Results</h2>
+            <p id="calificacion"></p>
+            <p id="porcentaje"></p>
+            <div id="revision"></div>
+        </div>
+
+        </div>
+            </div>
+        </details>
+
+        <details class="exercise-collapsible">
+            <summary>Exercise 2</summary>
+            <div class="exercise-content">
+
+                <div id="historial-intentos-2"></div>
+
+                <div id="intento-activo-2">
+
+                    <h3>Reading Comprehension</h3>
+
+                    <h1>Early Pregnancy: Understanding the Challenges and Making Informed Decisions</h1>
+
+                    <div class="reading-section">
+
+                        <p>
+                            Early pregnancy is an important social and health issue in many countries. It happens when a girl becomes pregnant during her teenage years, usually between the ages of 13 and 19. This situation can bring many changes to a young person's life. Although every experience is different, early pregnancy often creates challenges related to education, health, family relationships, and future opportunities.
+                        </p>
+
+                        <p>
+                            One of the main difficulties is the effect on education. Many teenage mothers find it difficult to continue their studies because they must take care of their babies. They may have less time to attend classes, complete homework, or prepare for exams. Some schools do not provide enough support for young mothers, so they may decide to leave their education. However, leaving school can limit their future job opportunities and make it harder to achieve financial independence. With flexible schedules, childcare services, and understanding teachers, many young mothers can continue studying and build a better future.
+                        </p>
+
+                        <p>
+                            Health is another important concern. Teenage bodies are still developing, and pregnancy can involve additional health risks. Young mothers may experience problems such as high blood pressure, anemia, or premature birth. Their babies may also have a higher risk of being born with a low birth weight. Regular medical appointments, healthy food, and emotional support can help reduce some of these risks. It is important for pregnant teenagers to receive medical attention as early as possible and to feel safe when asking for help.
+                        </p>
+
+                        <p>
+                            Family relationships can also change. Some teenagers receive love and support from their parents and relatives, while others experience criticism, rejection, or pressure. These reactions can make an already difficult situation more stressful. Instead of blaming or punishing a young person, families can offer guidance, listen carefully, and help find practical solutions. Feeling accepted can make a significant difference in a teenager's emotional well-being.
+                        </p>
+
+                        <p>
+                            Education about sexual health plays an essential role in preventing early pregnancy. Teenagers need clear and reliable information about their bodies, contraception, consent, and healthy relationships. Sometimes, young people avoid asking questions because they feel embarrassed or afraid of being judged. Schools, health professionals, and families should create safe environments where teenagers can discuss these topics openly. Having accurate information helps them understand the possible consequences of their decisions and make responsible choices.
+                        </p>
+
+                        <p>
+                            Society also has a responsibility to support young parents. Community programs can provide medical services, psychological assistance, educational opportunities, and advice about childcare. These services do not remove every difficulty, but they can help teenagers face their responsibilities with greater confidence. Young fathers should also participate in caring for their children because parenting is a shared responsibility.
+                        </p>
+
+                        <p>
+                            Early pregnancy can change a teenager's plans, but it does not mean that her future is over. With appropriate support, education, healthcare, and family understanding, young mothers can continue learning, develop useful skills, and create meaningful opportunities for themselves and their children. Prevention and support should go together: teenagers deserve both the information to make informed decisions and the help they need when facing difficult circumstances.
+                        </p>
+
+                    </div>
+
+                    <hr>
+
+                    <h2>Exercise 2 - Meaning and Interpretation</h2>
+
+                    <div class="quiz-instructions">
+                        <strong>Instructions:</strong>
+                        Read the text carefully. For each question, identify the meaning of the expression taken from the text. Choose the best paraphrased answer. Each question is worth one point.
+                    </div>
+
+                    <p id="progreso-2">20 questions | 0 answers selected</p>
+
+                    <div id="contenedor-preguntas-2"></div>
+
+                    <button type="button" id="btn-evaluar-2" class="btn-evaluate">
+                        Evaluate
+                    </button>
+
+                    <div id="resultados-2">
+                        <h2>Evaluation Results</h2>
+                        <p id="calificacion-2"></p>
+                        <p id="porcentaje-2"></p>
+                        <div id="revision-2"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </details>
+    </section>
+</main>
+
+<script>
+const preguntas = [
+    {
+        pregunta: "How has education changed in recent years?",
+        opciones: [
+            { texto: "Because of the Internet.", correcta: true },
+            { texto: "Because schools have disappeared.", correcta: false },
+            { texto: "Because students no longer need teachers.", correcta: false },
+            { texto: "Because books are no longer available.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "Which devices can students use to find information?",
+        opciones: [
+            { texto: "Only television sets.", correcta: false },
+            { texto: "Computers, tablets, and smartphones.", correcta: true },
+            { texto: "Only printed dictionaries.", correcta: false },
+            { texto: "Radios and cameras.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "How did students usually find answers in the past?",
+        opciones: [
+            { texto: "By watching online videos.", correcta: false },
+            { texto: "By sending digital messages.", correcta: false },
+            { texto: "By visiting libraries and looking through books.", correcta: true },
+            { texto: "By taking virtual classes.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "What can students do online to improve their knowledge?",
+        opciones: [
+            { texto: "Avoid reading and studying.", correcta: false },
+            { texto: "Only play online games.", correcta: false },
+            { texto: "Stop communicating with teachers.", correcta: false },
+            { texto: "Watch educational videos and take online courses.", correcta: true }
+        ]
+    },
+    {
+        pregunta: "What makes learning more flexible?",
+        opciones: [
+            { texto: "Access to online educational resources.", correcta: true },
+            { texto: "Having fewer educational opportunities.", correcta: false },
+            { texto: "Studying without any information.", correcta: false },
+            { texto: "Avoiding digital tools.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "How can students communicate and work together online?",
+        opciones: [
+            { texto: "By avoiding other students.", correcta: false },
+            { texto: "By sharing documents and exchanging ideas.", correcta: true },
+            { texto: "By studying only in libraries.", correcta: false },
+            { texto: "By turning off their computers.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "How can teachers use digital tools?",
+        opciones: [
+            { texto: "To prevent students from asking questions.", correcta: false },
+            { texto: "To replace all classroom activities.", correcta: false },
+            { texto: "To explain difficult topics and give extra activities.", correcta: true },
+            { texto: "To stop students from learning independently.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "What can students do when they do not understand a lesson?",
+        opciones: [
+            { texto: "Forget the subject completely.", correcta: false },
+            { texto: "Stop attending classes.", correcta: false },
+            { texto: "Avoid asking for help.", correcta: false },
+            { texto: "Repeat the lesson.", correcta: true }
+        ]
+    },
+    {
+        pregunta: "Which online activities can negatively affect students?",
+        opciones: [
+            { texto: "Spending too much time on social media and online games.", correcta: true },
+            { texto: "Reading educational articles.", correcta: false },
+            { texto: "Sharing school documents.", correcta: false },
+            { texto: "Watching lessons for school.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "What can notifications and online messages do?",
+        opciones: [
+            { texto: "Always improve concentration.", correcta: false },
+            { texto: "Interrupt students' work.", correcta: true },
+            { texto: "Guarantee better academic results.", correcta: false },
+            { texto: "Replace homework.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "What should students learn to do with their time?",
+        opciones: [
+            { texto: "Spend all their time online.", correcta: false },
+            { texto: "Avoid making plans.", correcta: false },
+            { texto: "Organize their time responsibly.", correcta: true },
+            { texto: "Stop using educational resources.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "Is all the information published on the Internet correct?",
+        opciones: [
+            { texto: "Yes, every website is reliable.", correcta: false },
+            { texto: "Yes, because the Internet checks every fact.", correcta: false },
+            { texto: "Yes, if the information is popular.", correcta: false },
+            { texto: "No, some websites contain false information.", correcta: true }
+        ]
+    },
+    {
+        pregunta: "What should students do to check online information?",
+        opciones: [
+            { texto: "Compare sources and check the authors.", correcta: true },
+            { texto: "Believe everything they read.", correcta: false },
+            { texto: "Use only social media comments.", correcta: false },
+            { texto: "Ignore the source of the information.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "Why do some students have fewer educational opportunities?",
+        opciones: [
+            { texto: "Because they have too many books.", correcta: false },
+            { texto: "Because their families cannot afford computers or good Internet connections.", correcta: true },
+            { texto: "Because all schools are closed.", correcta: false },
+            { texto: "Because online courses are not useful.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "Who should work together to make technology more accessible?",
+        opciones: [
+            { texto: "Only students.", correcta: false },
+            { texto: "Only Internet companies.", correcta: false },
+            { texto: "Schools and governments.", correcta: true },
+            { texto: "Only families.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "According to the text, can technology replace good teachers?",
+        opciones: [
+            { texto: "Yes, teachers are no longer necessary.", correcta: false },
+            { texto: "Yes, technology can replace all human communication.", correcta: false },
+            { texto: "Yes, students can learn everything without effort.", correcta: false },
+            { texto: "No, technology cannot replace good teachers.", correcta: true }
+        ]
+    },
+    {
+        pregunta: "What combination produces the best learning results?",
+        opciones: [
+            { texto: "Traditional learning and digital resources.", correcta: true },
+            { texto: "Only social media and entertainment.", correcta: false },
+            { texto: "Only online games.", correcta: false },
+            { texto: "Avoiding teachers and classmates.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "Who can guide students in the responsible use of the Internet?",
+        opciones: [
+            { texto: "Only website designers.", correcta: false },
+            { texto: "Teachers and families.", correcta: true },
+            { texto: "Only online advertisers.", correcta: false },
+            { texto: "Nobody needs to guide students.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "Where can students improve their knowledge with online resources?",
+        opciones: [
+            { texto: "Only inside a school library.", correcta: false },
+            { texto: "Only during examinations.", correcta: false },
+            { texto: "Outside the classroom.", correcta: true },
+            { texto: "Only when teachers are present.", correcta: false }
+        ]
+    },
+    {
+        pregunta: "What is the main message of the text?",
+        opciones: [
+            { texto: "Students should stop using the Internet.", correcta: false },
+            { texto: "Traditional education is no longer important.", correcta: false },
+            { texto: "The Internet has only negative effects.", correcta: false },
+            { texto: "The Internet is useful for education when students use it responsibly.", correcta: true }
+        ]
+    }
+];
+
+function mezclar(array) {
+    const copia = [...array];
+
+    for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+
+    return copia;
+}
+
+const intentoActivo = document.getElementById("intento-activo");
+const historial = document.getElementById("historial-intentos");
+
+const plantillaBase = intentoActivo.innerHTML;
+
+let preguntasPendientes = preguntas.map((pregunta, indiceOriginal) => ({
+    pregunta,
+    indiceOriginal
+}));
+
+let numeroIntento = 0;
+let intentos = [];
+let aciertosAcumulados = 0;
+
+const nombresIntentos = [
+    "Primer intento",
+    "Segundo intento",
+    "Tercer intento",
+    "Cuarto intento",
+    "Quinto intento",
+    "Sexto intento",
+    "Séptimo intento",
+    "Octavo intento",
+    "Noveno intento",
+    "Décimo intento"
+];
+
+function nombreIntento(numero) {
+    return nombresIntentos[numero - 1] || `Intento ${numero}`;
+}
+
+function actualizarProgreso() {
+    const seleccionadas = intentoActivo.querySelectorAll(
+        '#contenedor-preguntas input[type="radio"]:checked'
+    ).length;
+
+    const progreso = intentoActivo.querySelector("#progreso");
+
+    if (progreso) {
+        progreso.textContent =
+            `${preguntasPendientes.length} questions | ${seleccionadas} answers selected`;
+    }
+}
+
+function mostrarIntento() {
+    intentoActivo.innerHTML = plantillaBase;
+
+    const contenedor = intentoActivo.querySelector("#contenedor-preguntas");
+
+    const preguntasMezcladas = mezclar(preguntasPendientes);
+
+    preguntasMezcladas.forEach((elemento, indice) => {
+        const pregunta = elemento.pregunta;
+        const indiceOriginal = elemento.indiceOriginal;
+
+        const opcionesMezcladas = mezclar(pregunta.opciones);
+
+        const tarjeta = document.createElement("div");
+        tarjeta.className = "question-card";
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = `${indice + 1}. ${pregunta.pregunta}`;
+
+        tarjeta.appendChild(titulo);
+
+        opcionesMezcladas.forEach((opcion, numero) => {
+            const etiqueta = document.createElement("label");
+            etiqueta.className = "option-label";
+
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = `pregunta-${indiceOriginal}`;
+            input.value = numero;
+            input.dataset.correcta = String(opcion.correcta);
+
+            etiqueta.appendChild(input);
+
+            etiqueta.appendChild(
+                document.createTextNode(
+                    ` ${String.fromCharCode(65 + numero)}. ${opcion.texto}`
+                )
+            );
+
+            tarjeta.appendChild(etiqueta);
+        });
+
+        tarjeta.dataset.indiceOriginal = indiceOriginal;
+
+        contenedor.appendChild(tarjeta);
+    });
+
+    intentoActivo.querySelector("#progreso").textContent =
+        `${preguntasPendientes.length} questions | 0 answers selected`;
+
+    intentoActivo.querySelector("#btn-evaluar").addEventListener(
+        "click",
+        evaluarIntento
+    );
+
+    intentoActivo.querySelectorAll(
+        '#contenedor-preguntas input[type="radio"]'
+    ).forEach(input => {
+        input.addEventListener("change", actualizarProgreso);
+    });
+}
+
+function archivarIntento(puntos, total) {
+    const detalles = document.createElement("details");
+    detalles.className = "intento-anterior";
+
+    const resumen = document.createElement("summary");
+    resumen.textContent =
+        `${nombreIntento(numeroIntento)} — ${puntos}/${total}`;
+
+    const contenido = document.createElement("div");
+    contenido.className = "contenido-intento";
+    contenido.innerHTML = intentoActivo.innerHTML;
+
+    detalles.appendChild(resumen);
+    detalles.appendChild(contenido);
+
+    historial.appendChild(detalles);
+}
+
+function evaluarIntento() {
+    const contenedor = intentoActivo.querySelector("#contenedor-preguntas");
+
+    const seleccionadas = contenedor.querySelectorAll(
+        'input[type="radio"]:checked'
+    );
+
+    if (seleccionadas.length !== preguntasPendientes.length) {
+        alert(
+            `Please answer all ${preguntasPendientes.length} questions before evaluating.`
+        );
+        return;
+    }
+
+    numeroIntento++;
+
+    let puntos = 0;
+    const preguntasIncorrectas = [];
+
+    preguntasPendientes.forEach(elemento => {
+        const indice = elemento.indiceOriginal;
+
+        const tarjeta = contenedor.querySelector(
+            `[data-indice-original="${indice}"]`
+        );
+
+        const respuesta = tarjeta.querySelector(
+            'input[type="radio"]:checked'
+        );
+
+        const esCorrecta = respuesta.dataset.correcta === "true";
+
+        if (esCorrecta) {
+            puntos++;
+
+            respuesta.closest("label").classList.add("correcta");
+        } else {
+            preguntasIncorrectas.push(elemento);
+        }
+    });
+
+    // Congelar las respuestas del intento entregado.
+    contenedor.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.disabled = true;
+    });
+
+    intentoActivo.querySelector("#btn-evaluar").disabled = true;
+
+    // Guardar una copia independiente del intento completo.
+    aciertosAcumulados += puntos;
+    archivarIntento(aciertosAcumulados, preguntas.length);
+
+    intentos.push({
+        numero: numeroIntento,
+        puntos: aciertosAcumulados,
+        total: preguntas.length
+    });
+
+    preguntasPendientes = preguntasIncorrectas;
+
+    if (preguntasPendientes.length === 0) {
+        intentoActivo.innerHTML = `
+            <div id="resultados" style="display:block;">
+                <h2>Evaluation Completed!</h2>
+                <p id="calificacion">Final score: 20 / 20</p>
+                <p id="porcentaje">Percentage: 100%</p>
+                <p>Total attempts: ${numeroIntento}</p>
+                <p>Congratulations! You have answered all questions correctly.</p>
+            </div>
+        `;
+
+        historial.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        return;
+    }
+
+    // Presentar un nuevo intento solamente con las preguntas pendientes.
+    mostrarIntento();
+
+    intentoActivo.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+// Iniciar el primer intento.
+mostrarIntento();
+// ==========================================
+// EXERCISE 2 - EARLY PREGNANCY
+// MOTOR DE EVALUACIÓN INDEPENDIENTE
+// ==========================================
+
+let preguntas2 = [
+    {
+        pregunta: 'What does the text mean when it says, "This situation can bring many changes to a young person\'s life"?',
+        opciones: [
+            { texto: "Teenage pregnancy can affect different aspects of a young person's future.", correcta: true },
+            { texto: "Teenage pregnancy always produces exactly the same results for everyone.", correcta: false },
+            { texto: "Teenagers must immediately change their place of residence.", correcta: false },
+            { texto: "Young people can avoid every responsibility by changing their plans.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "leaving school can limit their future job opportunities"?',
+        opciones: [
+            { texto: "Leaving education may make it harder to find employment in the future.", correcta: true },
+            { texto: "Leaving school guarantees access to better professional positions.", correcta: false },
+            { texto: "Leaving school allows teenagers to choose any career they want.", correcta: false },
+            { texto: "Leaving education has no connection with future employment.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "achieve financial independence"?',
+        opciones: [
+            { texto: "Become able to support themselves economically without depending on others.", correcta: true },
+            { texto: "Receive money from relatives whenever they need it.", correcta: false },
+            { texto: "Avoid working because other people pay their expenses.", correcta: false },
+            { texto: "Spend their income without planning their expenses.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "flexible schedules, childcare services, and understanding teachers"?',
+        opciones: [
+            { texto: "Different forms of school support can help young mothers continue their education.", correcta: true },
+            { texto: "Schools should require young mothers to stop attending regular classes.", correcta: false },
+            { texto: "Teachers should take complete responsibility for raising students' children.", correcta: false },
+            { texto: "Young mothers should study only when their children are sleeping.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "Teenage bodies are still developing"?',
+        opciones: [
+            { texto: "The physical growth of adolescents has not necessarily finished.", correcta: true },
+            { texto: "Teenagers have already reached every stage of adult physical development.", correcta: false },
+            { texto: "Pregnancy prevents all teenagers from growing physically.", correcta: false },
+            { texto: "Teenagers are unable to experience any physical changes.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "additional health risks"?',
+        opciones: [
+            { texto: "Pregnancy during adolescence may involve extra medical dangers.", correcta: true },
+            { texto: "Teenage pregnancy completely removes existing health problems.", correcta: false },
+            { texto: "Young mothers are guaranteed to experience serious illnesses.", correcta: false },
+            { texto: "Pregnancy creates health problems only after the baby is born.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "a low birth weight"?',
+        opciones: [
+            { texto: "A baby weighs less than what is generally expected at birth.", correcta: true },
+            { texto: "A baby is born earlier than the expected date in every case.", correcta: false },
+            { texto: "A baby has difficulty learning to walk during childhood.", correcta: false },
+            { texto: "A baby grows faster than other children after birth.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "reduce some of these risks"?',
+        opciones: [
+            { texto: "Certain actions can make some health problems less likely.", correcta: true },
+            { texto: "Medical attention can guarantee that no health problem will occur.", correcta: false },
+            { texto: "Healthy food can eliminate every difficulty associated with pregnancy.", correcta: false },
+            { texto: "Health risks disappear automatically as soon as pregnancy begins.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "to feel safe when asking for help"?',
+        opciones: [
+            { texto: "Teenagers should be able to request assistance without fear or shame.", correcta: true },
+            { texto: "Teenagers should solve every medical problem without professional advice.", correcta: false },
+            { texto: "Teenagers should avoid discussing personal difficulties with adults.", correcta: false },
+            { texto: "Teenagers should ask for assistance only when their problems become serious.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "experience criticism, rejection, or pressure"?',
+        opciones: [
+            { texto: "Some teenagers may receive negative or unsupportive reactions from others.", correcta: true },
+            { texto: "All teenagers receive the same positive response from their relatives.", correcta: false },
+            { texto: "Some teenagers choose to criticize their parents and relatives.", correcta: false },
+            { texto: "Families always agree with every decision made by young people.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "make an already difficult situation more stressful"?',
+        opciones: [
+            { texto: "Negative reactions can increase the emotional pressure a teenager experiences.", correcta: true },
+            { texto: "Family disagreements can completely remove the responsibilities of parenting.", correcta: false },
+            { texto: "Difficult experiences automatically become easier when relatives disagree.", correcta: false },
+            { texto: "Stress disappears when teenagers stop communicating with their families.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "offer guidance, listen carefully, and help find practical solutions"?',
+        opciones: [
+            { texto: "Families should provide advice, attention, and useful assistance instead of blame.", correcta: true },
+            { texto: "Families should make every decision without considering the teenager's opinion.", correcta: false },
+            { texto: "Families should avoid discussing problems and leave teenagers alone.", correcta: false },
+            { texto: "Families should focus on punishment rather than offering support.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "Feeling accepted can make a significant difference"?',
+        opciones: [
+            { texto: "Being welcomed and supported can greatly improve a teenager's emotional experience.", correcta: true },
+            { texto: "Receiving acceptance means that teenagers no longer have responsibilities.", correcta: false },
+            { texto: "Being accepted guarantees that all personal problems will disappear.", correcta: false },
+            { texto: "Feeling accepted prevents teenagers from needing medical attention.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "clear and reliable information"?',
+        opciones: [
+            { texto: "Information that is easy to understand and can be trusted.", correcta: true },
+            { texto: "Information that is popular even when its facts are uncertain.", correcta: false },
+            { texto: "Information that avoids explaining important health topics.", correcta: false },
+            { texto: "Information that is based mainly on personal opinions and rumors.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "afraid of being judged"?',
+        opciones: [
+            { texto: "Young people may fear that others will criticize them for asking questions.", correcta: true },
+            { texto: "Young people may believe that every question has an incorrect answer.", correcta: false },
+            { texto: "Young people may prefer to teach others about subjects they do not understand.", correcta: false },
+            { texto: "Young people may think that health professionals cannot answer questions.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "safe environments where teenagers can discuss these topics openly"?',
+        opciones: [
+            { texto: "Places where young people can talk freely without feeling threatened or embarrassed.", correcta: true },
+            { texto: "Places where teenagers are prevented from discussing personal questions.", correcta: false },
+            { texto: "Places where only adults are allowed to exchange information about health.", correcta: false },
+            { texto: "Places where teenagers must agree with every opinion they hear.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "make responsible choices"?',
+        opciones: [
+            { texto: "Make decisions after considering their possible consequences.", correcta: true },
+            { texto: "Make decisions quickly without thinking about possible results.", correcta: false },
+            { texto: "Allow other people to make every personal decision for them.", correcta: false },
+            { texto: "Choose only what is convenient in the immediate moment.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "parenting is a shared responsibility"?',
+        opciones: [
+            { texto: "Both parents should participate in caring for and raising their children.", correcta: true },
+            { texto: "Only mothers should take care of children and their daily needs.", correcta: false },
+            { texto: "Parents should transfer all their responsibilities to relatives.", correcta: false },
+            { texto: "Fathers should participate only when children become adults.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "her future is over"?',
+        opciones: [
+            { texto: "The idea that a young mother has no opportunities or possibilities left in life.", correcta: true },
+            { texto: "The belief that every young mother must abandon all her personal goals.", correcta: false },
+            { texto: "The idea that teenage pregnancy automatically guarantees a successful future.", correcta: false },
+            { texto: "The belief that young mothers can never return to their studies.", correcta: false }
+        ]
+    },
+    {
+        pregunta: 'What does the text mean when it says, "Prevention and support should go together"?',
+        opciones: [
+            { texto: "Society should help teenagers avoid early pregnancy and also assist those who experience it.", correcta: true },
+            { texto: "Society should focus on preventing pregnancy and ignore young parents afterward.", correcta: false },
+            { texto: "Support should be offered only before teenagers receive health education.", correcta: false },
+            { texto: "Prevention and support are separate responsibilities that cannot be combined.", correcta: false }
+        ]
+    }
+];
+
+const intentoActivo2 = document.getElementById("intento-activo-2");
+const historial2 = document.getElementById("historial-intentos-2");
+
+const plantillaBase2 = intentoActivo2.innerHTML;
+
+let preguntasPendientes2 = preguntas2.map((pregunta, indiceOriginal) => ({
+    pregunta,
+    indiceOriginal
+}));
+
+let numeroIntento2 = 0;
+let intentos2 = [];
+let aciertosAcumulados2 = 0;
+
+const nombresIntentos2 = [
+    "Primer intento",
+    "Segundo intento",
+    "Tercer intento",
+    "Cuarto intento",
+    "Quinto intento",
+    "Sexto intento",
+    "Séptimo intento",
+    "Octavo intento",
+    "Noveno intento",
+    "Décimo intento"
+];
+
+function nombreIntento2(numero) {
+    return nombresIntentos2[numero - 1] || `Intento ${numero}`;
+}
+
+function actualizarProgreso2() {
+    const seleccionadas = intentoActivo2.querySelectorAll(
+        '#contenedor-preguntas-2 input[type="radio"]:checked'
+    ).length;
+
+    const progreso = intentoActivo2.querySelector("#progreso-2");
+
+    if (progreso) {
+        progreso.textContent =
+            `${preguntasPendientes2.length} questions | ${seleccionadas} answers selected`;
+    }
+}
+
+function mostrarIntento2() {
+    intentoActivo2.innerHTML = plantillaBase2;
+
+    const contenedor = intentoActivo2.querySelector("#contenedor-preguntas-2");
+    const preguntasMezcladas = mezclar(preguntasPendientes2);
+
+    preguntasMezcladas.forEach((elemento, indice) => {
+        const pregunta = elemento.pregunta;
+        const indiceOriginal = elemento.indiceOriginal;
+
+        const opcionesMezcladas = mezclar(pregunta.opciones);
+
+        const tarjeta = document.createElement("div");
+        tarjeta.className = "question-card";
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = `${indice + 1}. ${pregunta.pregunta}`;
+
+        tarjeta.appendChild(titulo);
+
+        opcionesMezcladas.forEach((opcion, numero) => {
+            const etiqueta = document.createElement("label");
+            etiqueta.className = "option-label";
+
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = `pregunta-2-${indiceOriginal}`;
+            input.value = numero;
+            input.dataset.correcta = String(opcion.correcta);
+
+            etiqueta.appendChild(input);
+
+            etiqueta.appendChild(
+                document.createTextNode(
+                    ` ${String.fromCharCode(65 + numero)}. ${opcion.texto}`
+                )
+            );
+
+            tarjeta.appendChild(etiqueta);
+        });
+
+        tarjeta.dataset.indiceOriginal = indiceOriginal;
+
+        contenedor.appendChild(tarjeta);
+    });
+
+    intentoActivo2.querySelector("#progreso-2").textContent =
+        `${preguntasPendientes2.length} questions | 0 answers selected`;
+
+    intentoActivo2.querySelector("#btn-evaluar-2").addEventListener(
+        "click",
+        evaluarIntento2
+    );
+
+    intentoActivo2.querySelectorAll(
+        '#contenedor-preguntas-2 input[type="radio"]'
+    ).forEach(input => {
+        input.addEventListener("change", actualizarProgreso2);
+    });
+}
+
+function archivarIntento2(puntos, total) {
+    const detalles = document.createElement("details");
+    detalles.className = "intento-anterior";
+
+    const resumen = document.createElement("summary");
+    resumen.textContent =
+        `${nombreIntento2(numeroIntento2)} — ${puntos}/${total}`;
+
+    const contenido = document.createElement("div");
+    contenido.className = "contenido-intento";
+    contenido.innerHTML = intentoActivo2.innerHTML;
+
+    detalles.appendChild(resumen);
+    detalles.appendChild(contenido);
+
+    historial2.appendChild(detalles);
+}
+
+function evaluarIntento2() {
+    const contenedor = intentoActivo2.querySelector("#contenedor-preguntas-2");
+
+    const seleccionadas = contenedor.querySelectorAll(
+        'input[type="radio"]:checked'
+    );
+
+    if (seleccionadas.length !== preguntasPendientes2.length) {
+        alert(
+            `Please answer all ${preguntasPendientes2.length} questions before evaluating.`
+        );
+        return;
+    }
+
+    numeroIntento2++;
+
+    let puntos = 0;
+    const preguntasIncorrectas = [];
+
+    preguntasPendientes2.forEach(elemento => {
+        const indice = elemento.indiceOriginal;
+
+        const tarjeta = contenedor.querySelector(
+            `[data-indice-original="${indice}"]`
+        );
+
+        const respuesta = tarjeta.querySelector(
+            'input[type="radio"]:checked'
+        );
+
+        const esCorrecta = respuesta.dataset.correcta === "true";
+
+        if (esCorrecta) {
+            puntos++;
+            respuesta.closest("label").classList.add("correcta");
+        } else {
+            preguntasIncorrectas.push(elemento);
+        }
+    });
+
+    contenedor.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.disabled = true;
+    });
+
+    intentoActivo2.querySelector("#btn-evaluar-2").disabled = true;
+
+    aciertosAcumulados2 += puntos;
+
+    archivarIntento2(aciertosAcumulados2, preguntas2.length);
+
+    intentos2.push({
+        numero: numeroIntento2,
+        puntos: aciertosAcumulados2,
+        total: preguntas2.length
+    });
+
+    preguntasPendientes2 = preguntasIncorrectas;
+
+    if (preguntasPendientes2.length === 0) {
+        intentoActivo2.innerHTML = `
+            <div id="resultados-2" style="display:block;">
+                <h2>Evaluation Completed!</h2>
+                <p id="calificacion-2">Final score: 20 / 20</p>
+                <p id="porcentaje-2">Percentage: 100%</p>
+                <p>Total attempts: ${numeroIntento2}</p>
+                <p>Congratulations! You have interpreted all expressions correctly.</p>
+            </div>
+        `;
+
+        historial2.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+        return;
+    }
+
+    mostrarIntento2();
+
+    intentoActivo2.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+// Iniciar el primer intento del Exercise 2.
+mostrarIntento2();
+</script>
+
+</body>
+</html>
