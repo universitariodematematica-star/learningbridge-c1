@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simulador de examen de Informática - Learning Bridge</title>
+
+    <link rel="stylesheet" href="recursos/css/estilos.css">
+
+    <style>
+        .exam-panel {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid var(--lb-border);
+            border-radius: 10px;
+            background: #ffffff;
+        }
+
+        .exam-status {
+            margin: 18px 0;
+            padding: 14px;
+            border-radius: 8px;
+            background: #eef6fa;
+            color: #17364B;
+            line-height: 1.6;
+        }
+
+        .exam-start-button {
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        .exam-start-button:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        .exam-question {
+            margin: 24px 0;
+            padding: 20px;
+            border: 1px solid #d6e0e8;
+            border-radius: 10px;
+            background: #ffffff;
+        }
+
+        .exam-question h3 {
+            margin-top: 0;
+            color: var(--lb-purple);
+        }
+
+        .exam-question-type {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #eef6fa;
+            color: #31516f;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .exam-question-text {
+            margin: 10px 0 16px;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .exam-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .exam-options legend {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .exam-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 13px;
+            border: 1px solid #d6e0e8;
+            border-radius: 8px;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .exam-option:hover {
+            background: #f3f8fb;
+        }
+
+        .exam-option input {
+            flex-shrink: 0;
+            width: 17px;
+            height: 17px;
+            accent-color: var(--lb-green);
+        }
+
+        .exam-question-feedback {
+            margin: 12px 0 0;
+            font-weight: 600;
+        }
+
+        .exam-question-feedback.is-correct {
+            color: #178a75;
+        }
+
+        .exam-question-feedback.is-incorrect {
+            color: #c0392b;
+        }
+
+        .exam-question-feedback.is-unanswered {
+            color: #d97706;
+        }
+
+        .exam-results {
+            margin-top: 24px;
+            padding: 20px;
+            border: 1px solid #d6e0e8;
+            border-radius: 10px;
+            background: #eef6fa;
+        }
+
+        .exam-results h3 {
+            margin-top: 0;
+            color: var(--lb-purple);
+        }
+
+        .exam-score {
+            font-size: 1.35em;
+            font-weight: 700;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            .exam-panel,
+            .exam-question {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="lb-header">
+        <div class="lb-container">
+            <h1>Learning Bridge</h1>
+            <p>Informática</p>
+        </div>
+    </header>
+
+    <main class="lb-container lb-main">
+
+        <section class="lb-card">
+
+            <a href="index.html">Volver al índice del curso</a>
+
+            <h2 class="lb-title">SIMULADOR DE EXAMEN</h2>
+
+            <h3>Informática</h3>
+
+            <p>
+                Pon a prueba tus conocimientos de Informática mediante un examen aleatorio.
+                Cada intento contiene 10 preguntas seleccionadas aleatoriamente del banco de preguntas.
+            </p>
+
+            <div class="exam-panel">
+
+                <h2>Instrucciones del examen</h2>
+
+                <p>
+                    Lee cuidadosamente cada pregunta y selecciona una respuesta.
+                    Las preguntas pueden tener cuatro opciones o dos opciones
+                    (Verdadero o falso).
+                </p>
+
+                <p>
+                    El examen contendrá 10 preguntas seleccionadas aleatoriamente.
+                    Cada respuesta correcta vale un punto.
+                </p>
+
+                <p>
+                    Tu calificación final será sobre 10 puntos.
+                </p>
+
+                <p
+                    id="exam-status"
+                    class="exam-status"
+                    role="status"
+                    aria-live="polite">
+                    Cargando el banco de preguntas...
+                </p>
+
+                <button
+                    type="button"
+                    id="btn-start-exam"
+                    class="lb-button exam-start-button"
+                    disabled>
+                    Comenzar examen
+                </button>
+
+            </div>
+
+            <section id="exam-area" hidden aria-label="Examen">
+
+                <div class="exam-panel">
+
+                    <h2>Examen</h2>
+
+                    <p id="exam-progress" aria-live="polite"></p>
+
+                    <div id="exam-questions"></div>
+
+                    <button
+                        type="button"
+                        id="btn-evaluate-exam"
+                        class="lb-evaluate-button">
+                        Evaluar examen
+                    </button>
+
+                    <div
+                        id="exam-results"
+                        class="exam-results"
+                        hidden
+                        aria-live="polite">
+
+                        <h3>Resultados del examen</h3>
+
+                        <p
+                            id="exam-score"
+                            class="exam-score">
+                        </p>
+
+                        <p id="exam-summary"></p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <nav
+            aria-label="Course navigation"
+            style="margin: 30px 0;">
+
+            <a class="lb-button" href="index.html">
+                Índice del curso
+            </a>
+
+        </nav>
+
+    </main>
+
+    <script src="recursos/js/banco-preguntas.js"></script>
+    <script src="recursos/js/simulador-examen.js"></script>
+
+</body>
+</html>
