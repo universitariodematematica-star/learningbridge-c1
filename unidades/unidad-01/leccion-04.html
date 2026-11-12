@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4 - The Successful Job Interview</title>
+    <link rel="stylesheet" href="../../recursos/css/estilos.css">
+
+    <style>
+        .lesson04-layout {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .lesson04-text-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            min-width: 0;
+        }
+
+        .lesson04-article,
+        .lesson04-tips {
+            padding: 20px;
+            border: 1px solid #dce2e8;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .lesson04-article h2,
+        .lesson04-tips h2 {
+            color: var(--lb-purple);
+            margin-top: 0;
+        }
+
+        .lesson04-author {
+            margin-top: -8px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .lesson04-article p {
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .lesson04-tips table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .lesson04-tips th,
+        .lesson04-tips td {
+            border: 1px solid #dce2e8;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        .lesson04-tips th {
+            background-color: #31516f;
+            color: #ffffff;
+        }
+
+        .lesson04-tips tbody tr:nth-child(even) {
+            background-color: #f2f6f9;
+        }
+
+        .lesson04-image-column {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .lesson04-image-column img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center top;
+        }
+
+        @media (max-width: 850px) {
+            .lesson04-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson04-image-column img {
+                width: min(100%, 520px);
+                height: auto;
+            }
+
+            .lesson04-image-column {
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .lesson04-article,
+            .lesson04-tips {
+                padding: 15px;
+            }
+
+            .lesson04-tips th,
+            .lesson04-tips td {
+                padding: 9px;
+                font-size: 14px;
+            }
+        }
+        .lesson04-warmup {
+            margin-bottom: 28px;
+            padding: 22px;
+            border: 1px solid #dce2e8;
+            border-radius: 10px;
+            background-color: #f2f6f9;
+        }
+
+        .lesson04-warmup h2 {
+            color: var(--lb-purple);
+            margin-top: 0;
+        }
+
+        .lesson04-warmup h3 {
+            color: #31516f;
+            margin-top: 22px;
+        }
+
+        .lesson04-warmup p,
+        .lesson04-warmup li {
+            line-height: 1.7;
+        }
+
+        .lesson04-warmup li {
+            margin-bottom: 7px;
+        }
+    
+        /* D. JOB INTERVIEW */
+
+        .lesson04-interview {
+            margin-top: 28px;
+            border: 1px solid #dce2e8;
+            border-radius: 10px;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .lesson04-interview > summary {
+            padding: 18px 22px;
+            background-color: #f2f6f9;
+            color: var(--lb-purple);
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .lesson04-interview > summary::marker {
+            color: var(--lb-purple);
+        }
+        .lesson04-confirm {
+            margin-top: 28px;
+            border: 1px solid #dce2e8;
+            border-radius: 10px;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .lesson04-confirm > summary {
+            padding: 18px 22px;
+            background-color: #f2f6f9;
+            color: var(--lb-purple);
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .lesson04-confirm > summary::marker {
+            color: var(--lb-purple);
+        }
+
+        .lesson04-interview-content {
+            padding: 22px;
+        }
+
+        .lesson04-interview-instructions {
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .lesson04-interview-question {
+            margin-bottom: 18px;
+            color: var(--lb-purple);
+        }
+
+        .lesson04-interview textarea {
+            display: block;
+            width: 100%;
+            min-height: 190px;
+            padding: 14px;
+            border: 1px solid #cbd5df;
+            border-radius: 8px;
+            font: inherit;
+            line-height: 1.6;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        .lesson04-interview textarea:focus {
+            outline: 2px solid #31516f;
+            outline-offset: 2px;
+        }
+
+        .lesson04-word-counter {
+            margin-top: 10px;
+            font-weight: 700;
+            color: #c0392b;
+        }
+
+        .lesson04-word-counter.is-complete {
+            color: #178a75;
+        }
+
+        .lesson04-interview-progress {
+            margin-bottom: 18px;
+            color: #5b6570;
+            font-size: 0.95rem;
+        }
+
+        .lesson04-interview-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .lesson04-interview-navigation button {
+            padding: 11px 20px;
+            border: none;
+            border-radius: 7px;
+            background-color: #31516f;
+            color: #ffffff;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .lesson04-interview-navigation button:hover {
+            filter: brightness(1.12);
+        }
+
+        .lesson04-interview-navigation button:focus-visible {
+            outline: 3px solid #178a75;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 600px) {
+            .lesson04-interview-content {
+                padding: 15px;
+            }
+
+            .lesson04-interview > summary {
+                padding: 15px;
+            }
+
+            .lesson04-confirm > summary {
+                padding: 15px;
+            }
+
+            .lesson04-interview textarea {
+                min-height: 170px;
+            }
+        }
+</style>
+</head>
+
+<body>
+
+    <header class="lb-header">
+        <div class="lb-container">
+            <h1>Learning Bridge</h1>
+            <p>Advanced English C1</p>
+        </div>
+    </header>
+
+    <main class="lb-container lb-main">
+        <section class="lb-card">
+
+            <a href="../../index.html">Back to course index</a>
+
+            <h2 class="lb-title">Lesson 4: Describe Job Qualifications</h2>
+
+            <section class="lesson04-warmup">
+
+                <h2>Reading Warm-up: First Impressions Matter</h2>
+
+                <p>Before you read, think about the following situations.</p>
+
+                <h3>Part 1. Discuss the questions.</h3>
+
+                <ol>
+                    <li>What would you do to prepare for an important job interview?</li>
+                    <li>How would you feel if you arrived late for an interview?</li>
+                    <li>What qualities do you think employers look for in a candidate?</li>
+                </ol>
+
+                <h3>Part 2. Choose the best answer.</h3>
+
+                <p>Which of the following is most likely to make a positive first impression?</p>
+
+                <ol type="A">
+                    <li>Arriving ten minutes late.</li>
+                    <li>Dressing appropriately and greeting the interviewer politely.</li>
+                    <li>Talking continuously about your achievements.</li>
+                    <li>Asking about the salary before discussing the position.</li>
+                </ol>
+
+                <h3>Part 3. Make a prediction.</h3>
+
+                <p>What do you think the article will teach you about successful job interviews?</p>
+
+            </section>
+
+            <div class="lesson04-layout">
+
+                <div class="lesson04-text-column">
+
+                    <article class="lesson04-article">
+
+                        <h2>The Successful Job Interview</h2>
+
+                        <p class="lesson04-author">By Charlotte Watson</p>
+
+                        <p>
+                            OK. So you've sent in an application and a rÃƒÂ©sumÃƒÂ© for that dream job you saw advertised. The employer thinks you might be a good candidate, and you've landed an interview. You already know it's important to dress right, offer a firm handshake, and maintain eye contact, but do you know that other aspects of your behavior can make the difference between getting that job or not?
+                        </p>
+
+                        <p>
+                            Being late to a job interview is almost always a disqualifier. Most candidates are on their best behavior for their interview, so being late is a major red flag for employers. Since punctuality is expected in any kind of work setting, arriving late makes your future employer think you'll be late for work if you get the job. If you are late for your interview, it's important to provide an airtight detailed excuse, explaining why your lateness was unavoidable. Apologize and reassure the interviewer that this isn't habitual behavior on your part.
+                        </p>
+
+                        <p>
+                            Another thing that can get an interviewee off on the wrong foot is being overly informal or too familiar. Even though the person who interviews you might be friendly or dressed informally, don't take this as permission to be inappropriately casual. If an interviewer wants to be addressed by his or her first name, he or she will invite you to do that. If not, be sure to stick with last names and titles.
+                        </p>
+
+                        <p>
+                            Remember that employers want to know that you are interested in the job and will be a motivated employee. A candidate who hasn't taken the time to learn something about the company or the position being offered appears unmotivated and willing to take anything that comes along. Even if you are sure you already know everything you need to know about the job or the company, prepare two or three relevant questions for the interviewer of the position. And listen with obvious interest to the answers, following up with thoughtful questions that demonstrate that you have been listening.
+                        </p>
+
+                        <p>
+                            So before your next job interview, check out the list of do's and don'ts and follow the suggestions. They'll take you a long way towards getting that dream job!
+                        </p>
+
+                    </article>
+
+                    <section class="lesson04-tips">
+
+                        <h2>Top Ten Do's and Don'ts for Your Job Interview</h2>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Do</th>
+                                    <th>Don't</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Arrive on time.</td>
+                                    <td>Be too familiar.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Stay on topic when answering questions.</td>
+                                    <td>Talk too much.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Ask questions.</td>
+                                    <td>Seem desperate to get the job.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Listen.</td>
+                                    <td>Criticize your current employer.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Be modest, yet positive about yourself.</td>
+                                    <td>Brag about yourself.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+
+                </div>
+
+                <div class="lesson04-image-column">
+                    <img
+                        src="../../recursos/imagenes/unidad-01/leccion-04/img1.4.1.jpg"
+                        alt="The Successful Job Interview"
+                    >
+                </div>
+
+            </div>
+            <details class="lesson04-confirm">
+
+                <summary>C. CONFIRM INFORMATION</summary>
+<div class="lesson04-confirm-content">
+
+                <p>Write a checkmark for the ideas that Charlotte Watson expressed in the article.</p>
+
+                <ol class="lesson04-confirm-list">
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Employers expect employees to be punctual on the job.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="false"> You shouldn't ask the employer questions during a job interview because it might indicate that you don't know anything about the company.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> It's important for job candidates to express interest in the company offering the job.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="false"> Employers should dress informally when they interview job candidates.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="false"> It's better not to explain why you are late for an interview.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Punctuality is expected in every kind of work setting.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Arriving late may make an employer think you will also be late for work.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> If you arrive late, you should explain in detail why your lateness was unavoidable.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> You should apologize if you arrive late for an interview.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="false"> If the interviewer is friendly, you can automatically address that person by their first name.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Candidates should use last names and titles unless the interviewer invites them to use a first name.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Learning about the company and the position can demonstrate that you are interested in the job.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="false"> A candidate who knows very little about the company usually appears highly motivated.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Preparing two or three relevant questions is recommended.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Listening carefully and asking thoughtful follow-up questions demonstrate interest.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Employers want to hire people who are interested in the job and motivated to work.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="false"> Being late is not a serious problem if you behave well during the interview.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Dressing appropriately, offering a firm handshake, and maintaining eye contact are important.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="false"> Candidates should behave informally whenever the interviewer dresses informally.</label></li>
+                    <li><label><input type="checkbox" class="lesson04-answer" data-correct="true"> Following the article's suggestions can help candidates get their dream job.</label></li>
+                </ol>
+
+                <button type="button" id="lesson04-evaluate">Evaluate</button>
+                <p id="lesson04-feedback" aria-live="polite"></p>
+
+            </div>
+</details>
+        <details class="lesson04-interview">
+            <summary>D. JOB INTERVIEW</summary>
+
+            <div class="lesson04-interview-content">
+
+                <div class="lesson04-interview-instructions">
+                    <p>Imagine you are applying for a job. Answer the interviewer's questions in complete sentences.</p>
+                    <p>Write at least <strong>75 words</strong> for each answer. You can move between questions and revise your answers whenever you need to.</p>
+                    <p>Your answers will be saved automatically. When you finish all 20 questions, you will be able to print your questions and answers as a PDF. Save the PDF and send it to your teacher.</p>
+                </div>
+
+                <div id="lesson04-interview-progress" class="lesson04-interview-progress" aria-live="polite">
+                    Question 1 of 20
+                </div>
+
+                <div id="lesson04-interview-question-area">
+
+                    <h3 id="lesson04-interview-question" class="lesson04-interview-question">
+                        Interview question
+                    </h3>
+
+                    <textarea
+                        id="lesson04-interview-answer"
+                        placeholder="Write your answer here..."
+                        aria-label="Your interview answer"
+                    ></textarea>
+
+                    <p
+                        id="lesson04-interview-counter"
+                        class="lesson04-word-counter"
+                        aria-live="polite"
+                    >0 / 75 words</p>
+
+                </div>
+
+                <div class="lesson04-interview-navigation">
+
+                    <button
+                        type="button"
+                        id="lesson04-previous"
+                        hidden
+                    >Previous Question</button>
+
+                    <button
+                        type="button"
+                        id="lesson04-next"
+                        hidden
+                    >Next Question</button>
+
+                    <button
+                        type="button"
+                        id="lesson04-print"
+                        hidden
+                    >Print Answers</button>
+
+                </div>
+
+            </div>
+        </details>
+
+
+
+        </section>
+    </main>
+
+<nav aria-label="Lesson navigation"
+     style="margin: 30px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+
+    <a class="lb-button" href="../../index.html">
+        Course syllabus
+    </a>
+
+    <a class="lb-button" href="leccion-03.html">
+        Previous lesson: Compare your dreams and goals in life
+    </a>
+
+</nav>
+
+<script id="lesson04-evaluation-script">
+document.addEventListener("DOMContentLoaded", function () {
+
+    const boton = document.getElementById("lesson04-evaluate");
+    const resultado = document.getElementById("lesson04-feedback");
+    const respuestas = document.querySelectorAll(
+        ".lesson04-confirm .lesson04-answer"
+    );
+
+    if (!boton || !resultado || respuestas.length !== 20) {
+        return;
+    }
+
+    boton.addEventListener("click", function () {
+
+        let puntuacion = 0;
+
+        respuestas.forEach(function (respuesta) {
+
+            const esCorrecta = respuesta.dataset.correct === "true";
+            const seleccionada = respuesta.checked;
+            const elemento = respuesta.closest("li");
+
+            const acierto = seleccionada === esCorrecta;
+
+            if (acierto) {
+                puntuacion++;
+                elemento.style.backgroundColor = "#e8f5e9";
+                elemento.style.borderLeft = "4px solid #178a75";
+            } else {
+                elemento.style.backgroundColor = "#fdecec";
+                elemento.style.borderLeft = "4px solid #c0392b";
+            }
+
+            elemento.style.padding = "10px";
+            elemento.style.borderRadius = "6px";
+            elemento.style.marginBottom = "8px";
+        });
+
+        const porcentaje = Math.round((puntuacion / respuestas.length) * 100);
+
+        resultado.textContent =
+            "Your score: " + puntuacion + "/20 (" + porcentaje + "%).";
+
+        if (puntuacion === 20) {
+            resultado.textContent += " Excellent work!";
+        } else if (puntuacion >= 16) {
+            resultado.textContent += " Very good!";
+        } else if (puntuacion >= 12) {
+            resultado.textContent += " Good effort! Keep practicing.";
+        } else {
+            resultado.textContent += " Review the article and try again.";
+        }
+
+        resultado.style.fontWeight = "bold";
+        resultado.style.color = puntuacion >= 12 ? "#178a75" : "#c0392b";
+    });
+
+});
+</script>
+<script src="../../recursos/js/lesson-04-practice.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
